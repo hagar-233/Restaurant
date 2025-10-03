@@ -86,6 +86,15 @@ namespace ConsoleApp131
 
 
         }
+ public static void ViewProfile(int index, List<Customer> list)
+  {
+      Console.ForegroundColor = ConsoleColor.Magenta;
+      Console.WriteLine("========Update Profile========");
+      Console.WriteLine($"Name:{list[index].Name}");
+      Console.WriteLine($"UserName:{list[index].UserName}");
+      Console.WriteLine($"PhoneNumber:{list[index].Phone}");
+      Console.WriteLine($"Address:{list[index].Address}");
+  }
         public static int login(List<Customer> list)
         {
             Console.WriteLine("========Login========");
@@ -222,3 +231,4 @@ namespace ConsoleApp131
         
     }
 }
+
