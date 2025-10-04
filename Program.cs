@@ -57,13 +57,13 @@ namespace ConsoleApp131
                 while (true)
                 {
                     Console.ForegroundColor = ConsoleColor.DarkYellow;
-                    Console.WriteLine("1.view Menu\n2.view Order\n3.Payment\n4.update Profile\n5.Exit");
+                    Console.WriteLine("1.view Menu\n2.view Order\n3.Payment\n4.update Profile\n5.view profile\n6.Exit");
                     Console.WriteLine();
                     Console.WriteLine();
                     Console.Write("Enter number choice:");
                      choice = Console.ReadLine();
                     int num;
-                    while (!int.TryParse(choice, out num) || num < 1 || num > 5)
+                    while (!int.TryParse(choice, out num) || num < 1 || num > 6)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.WriteLine("invalid choice \n try again ");
@@ -182,7 +182,15 @@ namespace ConsoleApp131
                         }
 
                     }
-                    else if (num == 5)
+                     else if (num == 5)
+                     {
+                        Console.WriteLine();
+                        Console.WriteLine();
+                        Customer.ViewProfile(index, list);
+                        Console.WriteLine();
+                        Console.WriteLine();
+                     } 
+                    else if (num == 6)
                     {
                         break;
                     }
@@ -192,3 +200,4 @@ namespace ConsoleApp131
         }
     }
 }
+
